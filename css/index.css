@@ -1,89 +1,202 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Suha</title>
-    <link rel="stylesheet" href="css/index.css">
-</head>
-<body>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+:root {
+--black: black;
+--white:white;
+}
+
+body{
+width: 100%;
+max-width: 100vw;
+font-size: clamp(16px, 1.5rem, 3em);
+margin: auto;
+display: grid;
+place-items: center;
+border-radius: 10px;
+}
+#header{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #141414;
+    border: 2px solid orange;
+}
+.logo-name {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     
-   <div id="header">      
-         <div class="logo-name">   
-         <h1>nyheter</h1>
-         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-nuBzsGwqhxuMohWpYeHlzozjgdgH-rquGw&s" alt="logo" class="logo"/>
-         </div>
-             <!--nav start-->
-            <div id="nav">
-            <a href="#">home</a>
-            <a href="#">om oss</a>
-            <a href="#">kontakta oss</a>
-            <a href="#">toppnyheter</a>
-            </div>
-        </div>
+}
+.logo-name h1 {
+    color: orange;
+    }
+.logo {
+    border-radius: 50%;
+    padding: 10px 10px;
+    border: 2px solid orange;
+}
+#nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size:x-large;
+    justify-content: center;
+    justify-content: space-around;
+    font-weight: 600;
+    padding: 0 20px;
+ 
+}
+ #nav a {
+        color: var(--white);
+        text-decoration: none;
+    }
+#hero {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: white;
+}
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    color: red;
+}
+.hero-bild {
+   object-fit: cover;
+   width: 360px;
+   height: auto;
+}
+#main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: #fbf8f8;
+    width: 100%;
+    padding: 50px 10px;
+    border: 2px solid rgb(11, 11, 10);
 
-     <!--hero start-->
-     <div id="hero">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjFhSAcinC29rMXOgNll8CE-cI9YFaYx8BHA&s" alt="hero bild" class="hero-bild">
-        <div class="hero-text">
-        <h1>viktiga en strom vantas drabba Sverige imorgon.</h1>
-        <p>titta in klockan 20 ikvall for fler nyheter</p>
-        </div>
- </div>
-     <!--hero end-->
+.nyheter1 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 400px;
+    height: 300px;   
+    float: right;
+    border: 2px solid black;
 
-     <div id="main">
-         <section>
-             <img src="https://cdn.bulletin.nu/articles/1c27d23a-ca63-4415-8dae-2a5710c0d325/preview.jpg?t=1761735391000&d=640x480" alt="nyheter1" class="nyheter1"/>
-             <h1>Polise</h1>
-             <p>Lorem ipsum dolor,
-             sit amet consectetur adipisicing elit.
-             Ratione dignissimos dolorum doloribus placeat distinctio repellendus quisquam sed dolor ipsum,
-             et neque omnis maxime minus! Dolorum nostrum quis harum quibusdam rerum.
-             <br/> <br/> Lorem, 
-             ipsum dolor sit amet consectetur adipisicing elit.
-             Sapiente obcaecati illo, ducimus sunt, nulla,
-             a magnam voluptatem quidem pariatur dicta officia quo veritatis maxime. 
-             Temporibus optio cum esse modi tenetur.
-             <br/>
-             <button> las mer</button>
-             </p>
-            </section>
-        </div>
-<hr>
-         <div id="main-top">
-         <section>
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPKEEEURT9kAPGM5woviWD3WGcfR_qGLiRqg&s" alt="Australian" class="nyheter2">
-             <h1>Australian fire</h1>
-             <p>Lorem ipsum dolor,
-             sit amet consectetur adipisicing elit.
-             Ratione dignissimos dolorum doloribus placeat distinctio repellendus quisquam sed dolor ipsum,
-             et neque omnis maxime minus! Dolorum nostrum quis harum quibusdam rerum.
-             <br/> <br/> Lorem, 
-             ipsum dolor sit amet consectetur adipisicing elit.
-             Sapiente obcaecati illo, ducimus sunt, nulla,
-             a magnam voluptatem quidem pariatur dicta officia quo veritatis maxime. 
-             Temporibus optio cum esse modi tenetur.
-             <br/>
-             <button> las mer</button>
-             </p>
-             </section>
-             </div>
+}
+}
+button {
+    background-color: red;
+    color: var(--white);
+    width: 100px;
+    height: 30px;
+    border: none;
+}
+#main-top {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: #fbf8f8;
+    width: 100%;
+    padding: 50px 10px;
+    border: 2px solid black;
+}
+#main-top .nyheter2 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 400px;
+    height: 300px;   
+    float: right;
+    border: 2px solid black;
+}
 
-        <div class="news">
-            <div class="slides">
-                <img src="https://www.europarl.europa.eu/resources/library/images/20200911PHT86904/20200911PHT86904_original.jpg" alt="man" class="man" width="200px;"/>
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYdK4MLrQDcttCHow3fKYU4QfxJGbVUcbUXA&s" alt="covid" class="covid"/>
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT07SeivsfMiFyVu_mvtBWEEJQz0KciREUxsA&s" alt="bil"class="bil"/>
-            </div>
-        </div>
+.news {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    border: 2px solid black;  
+    border-radius: 15px;
+    margin: 20px; 
+    background-color: white;  
 
+}
+.slides {
+  display: flex;  
+  flex-direction: row;
+  animation: slideanimation 9s linear infinite;
+}
 
-<div id="footer">
-    alla ratigheter ar forbehalla
-</div>
+@keyframes slideanimation {
+    from {transform: translateX(100%) } /*right*/
+    to{transform: translatex(-100%); } /*left for att (-) */
+}
+#footer{
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    flex-direction: row;
+    background-color: black;
+    color: var(--white);
+    justify-content: center;
+}
 
+@media screen and (max-width: 600px) {
+   
+    body {
+       grid-template-columns: 1fr;
+       grid-template-rows: auto;
+       width: 100%;
+       max-width: 100vw;
+  }
+  #header, #hero, #main, #main-top, .nyheter1, .nyheter2, .news {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+  }
+    
+}
+@media screen and (min-width: 601px) and (max-width:900px) {
 
-   </div> 
-</body>
-</html>
+  body {
+       grid-template-columns: 1fr;
+       grid-template-rows: auto;
+       width: 100%;
+       max-width: 100vw;
+       place-items: stretch;
+  }
+   #header, #hero, #main, #main-top, .nyheter1, .nyheter2, .news {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: stretch;
+      text-align: center;
+  }
+}
+@media screen and (min-width: 901px) {
+   
+    body {
+     display: grid;
+     place-items: center;
+     border-radius: 10px;
+  }
+     #header, #hero, #main, #main-top, .nyheter1, .nyheter2, .news {
+    display: flex;
+    flex-direction: row;
+  }
+  }
+
